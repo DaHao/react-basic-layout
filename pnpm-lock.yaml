@@ -2,6 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/core': ^7.16.0
+  '@babel/preset-react': ^7.16.7
+  '@emotion/babel-plugin': ^11.7.2
   '@emotion/react': ^11.7.1
   '@emotion/styled': ^11.6.0
   '@mui/icons-material': ^5.4.2
@@ -62,6 +64,8 @@ specifiers:
 
 dependencies:
   '@babel/core': 7.17.5
+  '@babel/preset-react': 7.16.7_@babel+core@7.17.5
+  '@emotion/babel-plugin': 11.7.2_@babel+core@7.17.5
   '@emotion/react': 11.7.1_@babel+core@7.17.5+react@17.0.2
   '@emotion/styled': 11.6.0_1b33a7e1ff5a264759aa4ac5b516ab4b
   '@mui/icons-material': 5.4.2_@mui+material@5.4.2+react@17.0.2
