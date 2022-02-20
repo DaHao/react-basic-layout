@@ -1,9 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/react';
 import Box from '@mui/material/Box';
-import Header from './Header';
-import Menus from './Menus';
+import Header from '../components/Header';
+import Menus from '../components/Menus';
 
 const wrapperCss = css`
     display: flex;
@@ -28,7 +29,7 @@ const contentCss = css`
 
 const Layout = ({ children }) => {
     return (
-    <React.Fragment>
+    <div>
         <Header />
         <Box css={wrapperCss}>
             <Box css={menuCss}>
@@ -36,10 +37,12 @@ const Layout = ({ children }) => {
             </Box>
             <Box css={contentCss}>
                 <div>Test</div>
+                <Outlet />
+
                 {children}
             </Box>
         </Box>
-    </React.Fragment>
+    </div>
     );
 };
 export default Layout;
