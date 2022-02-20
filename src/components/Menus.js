@@ -1,10 +1,10 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const Menus = () => {
     return (
         <div>
-            <h1>Navigation</h1>
+            <h1>Menus</h1>
             <nav>
                 <ul>
                     <li>
@@ -15,8 +15,7 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
-            <Outlet />
         </div>
     );
 };
-export default Navigation;
+export default Menus;

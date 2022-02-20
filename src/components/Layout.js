@@ -1,27 +1,44 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
+import Box from '@mui/material/Box';
 import Header from './Header';
-import Navigation from './Navigation';
+import Menus from './Menus';
 
 const wrapperCss = css`
-    dispaly: flex;
-    top: 64px;
-    position: relative;
-    height: calc(100% - 64px);
-    width: 100%;
-    flex: auto;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: calc(100vh - 64px);
+    background-color: pink;
+`;
+
+const menuCss = css`
+    flex-grow: 1;
+    flex-shrink: 7;
+    background-color: green;
+`;
+
+const contentCss = css`
+    flex-grow: 7;
+    flex-shrink: 1;
+    overflow-y: scroll;
+    background-color: skyblue;
 `;
 
 const Layout = ({ children }) => {
     return (
     <React.Fragment>
         <Header />
-        <div css={wrapperCss}>
-            <Navigation />
-            <main>{children}</main>
-        </div>
+        <Box css={wrapperCss}>
+            <Box css={menuCss}>
+                <Menus />
+            </Box>
+            <Box css={contentCss}>
+                <div>Test</div>
+                {children}
+            </Box>
+        </Box>
     </React.Fragment>
     );
 };
